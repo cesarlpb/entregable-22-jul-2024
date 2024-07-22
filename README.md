@@ -3,6 +3,8 @@ Ejercicios entregables con Django / Python
 
 **Ejercicios elegidos:**
 
+- .  Marina
+- 13 Gerard
 -  4  Adán
 - 14 Alejandro
 - 10 Cristian
@@ -10,8 +12,8 @@ Ejercicios entregables con Django / Python
 - 8  Irene
 - 5  Fran
 - 16 Glenn
-- 6 Sergio
-- 9 Josias
+- 6  Sergio
+- 9  Josias
 - 12 Yago
 ---
 
