@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ post.title }}</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f8f9fa; /* Fondo gris claro */
+            padding-top: 20px;
+        }
+        .container {
+            max-width: 800px;
+            background-color: #E6E6FA; /* Fondo blanco para el contenido */
+            padding: 20px;
+            border-radius: 8px; /* Bordes redondeados */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+            text-align: center;
+        }
+        .btn-custom {
+            background-color: #007bff; /* Color de fondo del botón */
+            color: white; /* Color del texto del botón */
+        }
+        .btn-custom:hover {
+            background-color: #0056b3; /* Color del botón en hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4">{{ post.title }}</h1>
+        <p>{{ post.content }}</p>
+        <p>
+            <button class="btn btn-custom">Likes: {{ post.like_count }}</button>
+        </p>
+
+        {% if user.is_authenticated %}
+            
+                <a href="{% url 'remove_like' post.id %}" class="btn btn-danger">Unlike</a>
+            
+                <a href="{% url 'add_like' post.id %}" class="btn btn-success">Like</a>
+            
+        {% endif %}
+    </div>
+
+    <!-- Bootstrap JS, Popper.js, y jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
