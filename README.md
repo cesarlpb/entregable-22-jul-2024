@@ -3,7 +3,9 @@ Ejercicios entregables con Django / Python
 
 **Ejercicios elegidos:**
 
-- .  Marina
+- 1  J
+- 19 Marina
+- 17 Solomon
 - 13 Gerard
 -  4  Adán
 - 14 Alejandro
@@ -133,7 +135,7 @@ Lista de 20 ejercicios de Django que cubren diferentes aspectos del desarrollo w
 - Formatear los datos en CSV.
 - Manejar la descarga del archivo.
 
-#### 17. Comment System [notable alto / máxima puntuación]
+#### 17. Comment System [máxima puntuación]
 **Descripción**: Crear un sistema de comentarios para artículos.
 **Requisitos**:
 - Crear modelos `Article` y `Comment`.
