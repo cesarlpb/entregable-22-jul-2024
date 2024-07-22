@@ -3,7 +3,7 @@ Ejercicios entregables con Django / Python
 
 **Ejercicios elegidos:**
 
--  .  Adán
+-  4  Adán
 - 14 Alejandro
 - 10 Cristian
 - 20 Erik
