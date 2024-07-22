@@ -3,16 +3,16 @@ Ejercicios entregables con Django / Python
 
 **Ejercicios elegidos:**
 
-   - Adán
-14 - Alejandro
-10 - Cristian
-20 - Erik
-   - Irene
-5  - Fran
-   - Glenn
-6  - Sergio
-9  - Josias
-   - Yago
+-    Adán
+- 14 Alejandro
+- 10 Cristian
+- 20 Erik
+- .  Irene
+- 5  Fran
+- . Glenn
+- 6 Sergio
+- 9 Josias
+- . Yago
 ---
 
 Lista de 20 ejercicios de Django que cubren diferentes aspectos del desarrollo web con este framework. Cada ejercicio incluye una breve descripción de los requisitos y los objetivos.
