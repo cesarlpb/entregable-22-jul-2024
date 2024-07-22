@@ -1,0 +1,4 @@
+<option value="">Selecciona una Saga</option>
+{% for saga in sagas %}
+    <option value="{{ saga.id }}">{{ saga.titulo }}</option>
+{% endfor %}
