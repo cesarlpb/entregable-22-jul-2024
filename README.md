@@ -17,6 +17,8 @@ Ejercicios entregables con Django / Python
 - 6  Sergio
 - 9  Josias
 - 12 Yago
+
+Libres: 2, 3, 7, 11, 15, 18 
 ---
 
 Lista de 20 ejercicios de Django que cubren diferentes aspectos del desarrollo web con este framework. Cada ejercicio incluye una breve descripción de los requisitos y los objetivos.
