@@ -164,6 +164,21 @@ Lista de 20 ejercicios de Django que cubren diferentes aspectos del desarrollo w
 - **Instrucciones**: Cada ejercicio debe completarse y subirse en una rama separada con el nombre del ejercicio (por ejemplo, `feature/exercise1`).
 - **Repositorio**: Los alumnos recibirán la URL del repositorio donde deben hacer los pull requests.
 - **Pull Requests**: Cada pull request debe incluir una descripción clara de los cambios y cómo probar la funcionalidad.
+  - Rama: `ejercicio + nombre`, p.e. `01-pepe`
+  - Recomendación: nombrar carpeta proyecto `proyecto`
+
+### Instrucciones
+
+Comandos a ejecutar para probar el proyecto:
+
+```bash
+  cd <carpeta_de_proyecto>
+  python -m venv .venv && source .venv/bin/activate
+  pip install -r requirements.txt
+  python manage.py collectstatic --noinput # si arroja error, revisar STATIC_ROOT
+  python manage.py makemigrations && python manage migrate
+  python manage.py runserver
+```
 
 ---
 
