@@ -3,6 +3,8 @@ from django.shortcuts import render
 from django.core.mail import send_mail
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+
+from proyecto20.settings import EMAIL_HOST_RECEIVER
 from .forms import ContactForm
 
 def contact_view(request):
@@ -16,7 +18,7 @@ def contact_view(request):
                 f'Mensaje de {name}',
                 message,
                 email,
-                ['erikmuar91@gmail.com'],  # Cambia esto por el email donde quieres recibir los mensajes
+                [EMAIL_HOST_RECEIVER],  # Cambia esto por el email donde quieres recibir los mensajes
                 fail_silently=False,
             )
             return HttpResponseRedirect(reverse('contact:thanks'))

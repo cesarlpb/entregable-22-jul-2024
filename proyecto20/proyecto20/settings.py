@@ -124,9 +124,20 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+# Config del email:
+# Método 1: leemos el .env directamente
+ENV = {}
+
+with open(BASE_DIR / 'proyecto20' / '.env') as f:
+    lineas = [linea.split("=") for linea in f.read().splitlines()]
+
+for key, value in lineas:
+    ENV[key] = value
+
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'erikmuar91@gmail.com'
-EMAIL_HOST_PASSWORD = 'uhto qatm twby mmvd'
+EMAIL_HOST_USER = ENV["EMAIL_HOST_USER"]
+EMAIL_HOST_PASSWORD = ENV["APP_PASS"]
+EMAIL_HOST_RECEIVER = ENV["EMAIL_HOST_RECEIVER"]
