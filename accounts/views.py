@@ -11,7 +11,7 @@ def register(request):
             password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=password)
             login(request, user)
-            return redirect('home')
+            return redirect('register') # TODO: hacer home ._.
     else:
         form = SignUpForm()
     return render(request, 'accounts/register.html', {'form': form})
