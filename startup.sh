@@ -9,3 +9,4 @@
   python manage.py collectstatic --noinput # si arroja error, revisar STATIC_ROOT
   python manage.py makemigrations && python manage migrate
   python manage.py runserver
+  # NO CAMBIAR ^
