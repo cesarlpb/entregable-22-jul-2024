@@ -4,6 +4,9 @@ from django.contrib.auth.models import User
 class Post(models.Model):
     title = models.CharField(max_length=255)
     content = models.TextField()
+    # Posibles mejoras:
+    # Añadir uuid  
+    # Añadir slug: https://www.w3schools.com/django/django_slug_field.php
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
