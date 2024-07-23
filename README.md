@@ -32,7 +32,7 @@ Lista de 20 ejercicios de Django que cubren diferentes aspectos del desarrollo w
 - Formatear los datos obtenidos.
 - Devolverlos en formato JSON.
 
-#### 2. JSON User List [5 respado, hecho en clase]
+#### 2. JSON User List [5 raspado, hecho en clase]
 **Descripción**: Crear un endpoint que devuelva una lista de usuarios en formato JSON.
 **Requisitos**:
 - Crear un modelo `User`.
@@ -188,4 +188,4 @@ Comandos a ejecutar para probar el proyecto:
 
 ---
 
-Estos ejercicios pueden completarse en aproximadamente una hora cada uno aproximadamente.
+Estos ejercicios pueden completarse en aproximadamente 1 hora cada uno aproximadamente.
