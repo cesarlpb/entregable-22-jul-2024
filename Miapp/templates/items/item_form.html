@@ -1,0 +1,39 @@
+{% extends 'layouts/base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}Formulario Item{% endblock %}
+
+{% block content %}
+    <h1 class="my-4 text-center">Formulario Item</h1>
+    <div class="card">
+        <div class="card-header">
+            <h2 class="card-title">
+                {% if form_mode == 'crear' %}
+                    Crear un Item
+                {% elif form_mode == 'editar' %}
+                    Editar un Item
+                {% endif %}
+            </h2>
+        </div>
+        <div class="card-body">
+            <form method="post" class="needs-validation" novalidate>
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="{{ form.nombre.id_for_label }}">Nombre</label>
+                    {{ form.nombre }}
+                </div>
+                <div class="form-group">
+                    <label for="{{ form.descripcion.id_for_label }}">Descripción</label>
+                    {{ form.descripcion }}
+                </div>
+                <div class="form-group">
+                    <label for="{{ form.precio.id_for_label }}">Precio</label>
+                    {{ form.precio }}
+                </div>
+                <button type="submit" class="btn btn-primary">Guardar</button>
+                <a href="{% url 'item_list' %}" class="btn btn-secondary">Cancelar</a>
+            </form>
+        </div>
+    </div>
+{% endblock %}

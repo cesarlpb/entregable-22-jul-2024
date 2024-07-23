@@ -1,0 +1,19 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Confirmación Delete{% endblock %}
+
+{% block content %}
+    <div class="card my-4">
+        <div class="card-header">
+            <h2 class="card-title text-center">☢️☢️☢️Confirmación de Eliminación☢️☢️☢️</h2>
+        </div>
+        <div class="card-body">
+            <h3>¿Estás seguro que deseas eliminar el ítem "{{ item.nombre }}"?</h3>
+            <form method="post" class="d-inline">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">Confirmar</button>
+            </form>
+            <a href="{% url 'item_detail' item.id %}" class="btn btn-secondary">Cancelar</a>
+        </div>
+    </div>
+{% endblock %}
