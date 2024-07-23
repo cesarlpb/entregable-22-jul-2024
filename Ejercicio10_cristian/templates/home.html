@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+
+{% if user.is_authenticated %}
+<h1>Hola Bienvenido:  {{ user.username }}!!</h1>
+
+
+
+<button><a href="{% url 'password_change' %}">Cambiar contraseña</a></button>
+
+<form action="{% url 'logout' %}" method="post">
+  {% csrf_token %}
+  <button type="submit">Cerrar sesion</button>
+</form>
+
+{% else %}
+<h1>No has iniciado sesión.</h1>
+<br>
+<p><a href="{% url 'login' %}">Iniciar Sesion</a></p>
+<br>
+<p><a href="{% url 'signup' %}">Registrarse</a></p>
+<br>
+<p><a href="{% url 'password_reset' %}">Has olvidado tu contraseña</a></p>
+
+{% endif %}
+
+{% endblock %}

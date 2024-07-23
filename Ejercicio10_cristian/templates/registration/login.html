@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Iniciar Sesión{% endblock %}
+
+{% block content %}
+<h2>Iniciar Sesión</h2>
+
+<form method="post">
+
+    {% csrf_token %}
+    {{ form }}
+    
+    <br>
+    <button type="submit">Iniciar Sesión</button>
+</form>
+
+<br>
+<button><a href="{% url 'home' %}">Inicio</a></button>
+{% endblock %}
