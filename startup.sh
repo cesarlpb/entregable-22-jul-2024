@@ -2,7 +2,7 @@
 
 cd <carpeta_de_proyecto>
 
-# NO CAMBIAR:
+# NO CAMBIARRRRRR:
 # Creamos .venv:
 python -m venv .venv
 # Activamos .venv:
