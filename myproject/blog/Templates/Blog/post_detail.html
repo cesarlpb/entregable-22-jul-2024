@@ -43,7 +43,15 @@
             
                 <a href="{% url 'add_like' post.id %}" class="btn btn-success">Like</a>
             
-        {% endif %}
+        {% endif %}        
+        
+        <hr>
+
+        <div>
+        {% for post in posts %}
+            <a href="{% url 'post_detail' post.id %}">Ir a post {{ post.id }}</a>
+        {% endfor %}
+        </div>
     </div>
 
     <!-- Bootstrap JS, Popper.js, y jQuery -->
