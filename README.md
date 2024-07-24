@@ -188,4 +188,11 @@ Comandos a ejecutar para probar el proyecto:
 
 ---
 
+## Backups
+
+```
+   python manage.py dumpdata --indent=4 > data.json
+   python manage.py loaddata data.json # comprobar migraciones, hacer migrate si es db nueva
+```
+
 Estos ejercicios pueden completarse en aproximadamente una hora cada uno aproximadamente.
