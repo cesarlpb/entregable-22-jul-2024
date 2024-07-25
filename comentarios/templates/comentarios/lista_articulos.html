@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Artículos</title>
+    {% load static %}
+    <!-- Cargar Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Cargar Bootstrap JS y sus dependencias -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1f1c2c, #928dab);
+            min-height: 100vh;
+            color: white;
+        }
+
+        h1 {
+            color: #ffffff;
+        }
+
+        .container {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .list-group-item {
+            background-color: rgba(0, 0, 0, 0.7);
+            border: none;
+            color: white;
+        }
+
+        .list-group-item a {
+            color: #f8f9fa;
+        }
+
+        .list-group-item a:hover {
+            color: #adb5bd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="my-4">Artículos</h1>
+        <ul class="list-group list-group-flush">
+            {% for articulo in articulos %}
+                <li class="list-group-item">
+                    <a href="{% url 'detalle_articulo' pk=articulo.pk %}">{{ articulo.titulo }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
