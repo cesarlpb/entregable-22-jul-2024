@@ -1,4 +1,4 @@
-from DataExport import FacturacionForm
+from DataExport.FacturacionForm import FacturacionForm
 from django.shortcuts import render
 from django.shortcuts import redirect
 from .models import Facturacion
@@ -29,7 +29,7 @@ def reset_datos(request):
 
 def exportar_csv(request):
     response = HttpResponse(content_type='text/csv')
-    response['Content-Disposition'] = 'attachment; filename="facturas.csv"'
+    response['Content-Disposition'] = 'attachment; filename="facturas.csv"' # TODO: añadir timestamp en nombre de archivo
 
     writer = csv.writer(response)
     writer.writerow(['Nombre Cliente', 'Dirección', 'Producto', 'Cantidad', 'Precio Total', 'Fecha'])
