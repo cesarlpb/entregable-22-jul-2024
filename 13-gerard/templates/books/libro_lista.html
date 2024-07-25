@@ -1,0 +1,4 @@
+<option value="">Selecciona un Libro</option>
+{% for libro in libros %}
+    <option value="{{ libro.id }}">{{ libro.titulo }}</option>
+{% endfor %}

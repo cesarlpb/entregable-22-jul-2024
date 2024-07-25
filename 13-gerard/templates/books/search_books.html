@@ -1,0 +1,21 @@
+<!-- templates/filtrar_libros.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% block javascript %}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{% static 'js/books.js' %}"></script>
+{% endblock %}
+
+{% block layout %}
+    <h1>Filtrar Libros</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit">Filtrar</button>
+    </form>
+    <div>
+    {% for libro in  libros %}
+        <a href="#">{{libro.caratula}}</a><br>
+    {% endfor %}
+    </div>
+{% endblock %}
