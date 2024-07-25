@@ -7,8 +7,7 @@ def lista_articulos(request):
     return render(request, 'comentarios/lista_articulos.html', {'articulos': articulos})
 
 def detalle_articulo(request, pk):
-    articulo = get_object_or_404(Articulo, pk=pk)
-    comentarios = articulo.comentarios.all()
+    
     if request.method == 'POST':
         form = ComentarioForm(request.POST)
         if form.is_valid():
@@ -17,5 +16,7 @@ def detalle_articulo(request, pk):
             comentario.save()
             return redirect('detalle_articulo', pk=articulo.pk)
     else:
+        articulo = get_object_or_404(Articulo, pk=pk)
+        comentarios = articulo.comentarios.all()        # TODO: limitar número de comentarios, 10, 20...
         form = ComentarioForm()
     return render(request, 'comentarios/detalle_articulo.html', {'articulo': articulo, 'comentarios': comentarios, 'form': form})
