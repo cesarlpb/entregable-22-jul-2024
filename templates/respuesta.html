@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Respuestas del Formulario</title>
+</head>
+<body>
+    <h1>Facturas Registradas</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre Cliente</th>
+                <th>Dirección</th>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio Total</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for factura in facturas %}
+            <tr>
+                <td>{{ factura.nombre_cliente }}</td>
+                <td>{{ factura.direccion }}</td>
+                <td>{{ factura.producto }}</td>
+                <td>{{ factura.cantidad }}</td>
+                <td>{{ factura.precio_total }}</td>
+                <td>{{ factura.fecha }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'home' %}">Hacer nuevo formulario</a>
+    <a href="{% url 'exportar_csv' %}">Descargar Formulario</a>
+    <a href="{% url 'reset_datos' %}">Reset Datos</a>
+</body>
+</html>
